@@ -1,0 +1,7 @@
+{
+  "name": "Shaswat's Ultra-Premium Portfolio",
+  "description": "An immersive 3D scrollytelling portfolio for Shaswat, featuring Three.js, GSAP, and Framer Motion.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "shaswat's-ultra-premium-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "framer-motion": "^12.29.0",
+    "@react-three/fiber": "^9.5.0",
+    "@google/genai": "^1.38.0",
+    "react-dom": "^19.2.3",
+    "three": "^0.182.0",
+    "gsap": "^3.14.2",
+    "@react-three/drei": "^10.7.7",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
