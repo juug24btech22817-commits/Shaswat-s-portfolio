@@ -61,6 +61,7 @@ export const Projects: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="group cursor-pointer"
+              onClick={() => i === 0 && window.open('https://shaswat-s-portfolio.vercel.app/', '_blank')}
             >
               <div className="relative aspect-[4/5.5] rounded-[3rem] overflow-hidden mb-10 border border-white/5 bg-[#0D1117] shadow-2xl transition-all duration-700 group-hover:border-cyan-500/40 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
                 
