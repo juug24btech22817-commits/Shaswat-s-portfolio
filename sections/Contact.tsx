@@ -21,10 +21,6 @@ const InstagramIcon = () => (
 );
 
 export const Contact: React.FC = () => {
-  const copyEmail = () => {
-    navigator.clipboard.writeText('shaswatshaswat620@gmail.com');
-  };
-
   return (
     <section id="contact" className="py-48 px-6 relative bg-transparent">
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-cyan-500/[0.03] to-transparent pointer-events-none"></div>
@@ -42,7 +38,11 @@ export const Contact: React.FC = () => {
           </h3>
           
           <div className="flex flex-col gap-8 max-w-2xl mx-auto mt-20">
-            <div className="flex items-center gap-6 group cursor-pointer" onClick={copyEmail}>
+            <a
+              href="mailto:shaswatshaswat620@gmail.com"
+              className="flex items-center gap-6 group cursor-pointer"
+              aria-label="Email shaswatshaswat620@gmail.com"
+            >
               <div className="w-16 h-16 rounded-[1.5rem] bg-white/[0.02] border border-white/5 flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-black transition-all duration-500 shadow-2xl">
                 <span className="text-2xl">✉️</span>
               </div>
@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
                 <p className="text-[10px] text-cyan-500/50 uppercase tracking-[0.4em] font-black mb-1">Official Relay</p>
                 <p className="text-white group-hover:text-cyan-400 transition-colors font-medium text-lg">shaswatshaswat620@gmail.com</p>
               </div>
-            </div>
+            </a>
 
             <div className="flex items-center gap-6 group cursor-pointer" onClick={() => window.open('tel:+918867329989')}>
               <div className="w-16 h-16 rounded-[1.5rem] bg-white/[0.02] border border-white/5 flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-black transition-all duration-500 shadow-2xl">
