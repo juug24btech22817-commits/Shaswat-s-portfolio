@@ -1,9 +1,8 @@
 
 export const PROFILE_IMAGES = {
-  // Use relative string paths for local assets. Native browser ESM environments 
-  // do not support 'import' statements for image files.
-  hero: "./shaswat.jpg",
-  about: "./shaswat.jpeg",
+  // Use absolute paths from public folder for production deployment (Vercel)
+  hero: "/shaswat.jpg",
+  about: "/shaswat.jpg",
   projects: {
     midnight: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
     terra: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop",
