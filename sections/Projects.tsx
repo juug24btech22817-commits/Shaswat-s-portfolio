@@ -9,7 +9,8 @@ const projects = [
     desc: "A sophisticated 3D scrollytelling architecture engineered with React Three Fiber, GSAP, and Gemini AI. This project serves as a masterclass in immersive UI, featuring real-time neural handshake protocols and high-performance shader animations to redefine digital identity.",
     image: PROFILE_IMAGES.projects.midnight,
     tags: ["Three.js", "React", "AI Integration", "GSAP"],
-    accent: "from-cyan-500/20 to-blue-600/20"
+    accent: "from-cyan-500/20 to-blue-600/20",
+    link: "https://shaswat-s-portfolio.vercel.app/"
   },
   {
     title: "THE LAND HUB",
@@ -19,11 +20,12 @@ const projects = [
     accent: "from-amber-500/20 to-orange-600/20"
   },
   {
-    title: "QUANTUM LEDGER",
-    desc: "A high-throughput fintech platform utilizing custom-trained LSTM models for predictive budget forecasting. Engineered for enterprise-grade data integrity, it processes complex financial datasets to provide real-time risk assessment and automated fiscal optimization.",
-    image: PROFILE_IMAGES.projects.quantum,
-    tags: ["Node.js", "GraphQL", "AI ML"],
-    accent: "from-emerald-500/20 to-cyan-600/20"
+    title: "HEALTHGUIDE AI",
+    desc: "A personalized AI healthcare companion providing intelligent symptom analysis and wellness tracking. Engineered with advanced neural processing to deliver real-time health insights, automated diagnostic support, and precision wellness recommendations.",
+    image: PROFILE_IMAGES.projects.healthguide,
+    tags: ["Healthcare", "AI Integration", "Next.js", "Vercel"],
+    accent: "from-emerald-500/20 to-cyan-600/20",
+    link: "https://health-guide-ai-kappa.vercel.app/"
   }
 ];
 
@@ -61,7 +63,7 @@ export const Projects: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="group cursor-pointer"
-              onClick={() => i === 0 && window.open('https://shaswat-s-portfolio.vercel.app/', '_blank')}
+              onClick={() => project.link && window.open(project.link, '_blank')}
             >
               <div className="relative aspect-[4/5.5] rounded-[3rem] overflow-hidden mb-10 border border-white/5 bg-[#0D1117] shadow-2xl transition-all duration-700 group-hover:border-cyan-500/40 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
                 
@@ -77,7 +79,7 @@ export const Projects: React.FC = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover brightness-[0.4] group-hover:brightness-75 group-hover:scale-110 transition-all duration-[1.5s] ease-[0.16, 1, 0.3, 1]"
+                  className="w-full h-full object-cover brightness-[0.7] group-hover:brightness-90 group-hover:scale-110 transition-all duration-[1.5s] ease-[0.16, 1, 0.3, 1]"
                 />
                 
                 {/* Custom Gradient Overlay based on project accent */}
@@ -102,8 +104,8 @@ export const Projects: React.FC = () => {
                     {project.desc}
                   </p>
 
-                  {/* Conditionally render View Project only for the primary Portfolio project (first index) */}
-                  {i === 0 && (
+                  {/* Conditionally render View Project for projects with a link */}
+                  {project.link && (
                     <div className="mt-8 flex items-center gap-4 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-200">
                       <div className="h-[1px] flex-1 bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
                       <span className="text-[9px] font-black text-cyan-500 uppercase tracking-[0.4em]">View Project</span>
@@ -111,8 +113,8 @@ export const Projects: React.FC = () => {
                   )}
                 </div>
 
-                {/* Corner Metallic Accent only for project with view link */}
-                {i === 0 && (
+                {/* Corner Metallic Accent for projects with a link */}
+                {project.link && (
                   <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                     <div className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-3xl flex items-center justify-center text-white text-xl shadow-2xl">
                       ↗
